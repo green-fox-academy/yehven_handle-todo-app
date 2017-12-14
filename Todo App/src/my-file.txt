@@ -1,4 +1,4 @@
-[ ]Walk the dog
-[X]Do_homework
-[ ]Feed dog
-[ ]Play
+Washing
+Eat pizza
+Kick
+Hit

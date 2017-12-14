@@ -42,12 +42,11 @@ public class Main {
         try {
             Path listPath = Paths.get("D:/Greenfox/Greenfox2/yehven_handle-todo-app/Todo App/src/my-file.txt");
             List<String> lines = Files.readAllLines(listPath);
-            int taskNumber = 0;
+            int taskNumber = 1;
             if (lines.get(0) != null) {
                 for (int i = 0; i < lines.size(); i++) {
-                    taskNumber++;
                     System.out.println(taskNumber + " - " + lines.get(i));
-
+                    taskNumber++;
                 }
             }
             else {
@@ -74,11 +73,10 @@ public class Main {
             Path listPath = Paths.get("D:/Greenfox/Greenfox2/yehven_handle-todo-app/Todo App/src/my-file.txt");
             List<String> lines = Files.readAllLines(listPath);
             int taskLineNumber = Integer.parseInt(args[1]);
-
             if (lines.size() < taskLineNumber) {
                 System.out.println("Unable to remove from file: index out of bound");
-            } else if (lines.size() >= 2 && lines.size() > taskLineNumber) {
-                lines.remove(taskLineNumber -1);
+            } else if (lines.size() >= 2 && lines.size() >= taskLineNumber) {
+                lines.remove(taskLineNumber - 1);
             }
             Files.write(listPath, lines, Charset.defaultCharset());
 
